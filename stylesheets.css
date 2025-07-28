@@ -1,0 +1,158 @@
+/* Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background-image: 
+    linear-gradient(45deg, #ffe6eb 25%, transparent 25%),
+    linear-gradient(-45deg, #ffe6eb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ffe6eb 75%),
+    linear-gradient(-45deg, transparent 75%, #ffe6eb 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Arched invitation container */
+.invitation-card {
+  background: white;
+  text-align: center;
+  padding: 80px 30px 40px;
+  max-width: 450px;
+  margin: 60px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+
+/* Headings */
+h1 {
+  color: #87A96B;
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+h2 {
+  font-family: 'Cursive';
+  font-size: 1.2rem;
+  color: #87A96B;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: 'Snell Roundhand', cursive;
+  font-size: 1.8rem;
+  color: #87A96B;
+  margin: 10px 0 20px;
+}
+
+/* Image */
+.market-img {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Text */
+.invite-text {
+  margin: 15px 0 5px;
+  font-size: 1rem;
+  color: #444;
+}
+
+hr {
+  margin: 25px 0;
+  border: 0;
+  height: 1px;
+  background: #eee;
+}
+
+/* RSVP Form */
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rsvp-form h4 {
+  font-size: 1.2rem;
+  color:#eec0c8;;
+  margin-bottom: 5px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.rsvp-form button {
+  padding: 10px;
+  background-color: #eec0c8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-form button:hover {
+  background-color: #87A96B;
+}
+
+/* Registry Section */
+.registry-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.registry-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #87A96B;
+}
+
+.registry-section p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 15px;
+  padding: 0 10px;
+}
+
+.registry-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #87A96B;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.registry-button:hover {
+  background-color: #eec0c8;
+}
+
+.thank-you-message {
+  text-align: center;
+  background-color: #fff8f8;
+  padding: 20px;
+  border-radius: 10px;
+  color: #7c5c37;
+  font-size: 1rem;
+}

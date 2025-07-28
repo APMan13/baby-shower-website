@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baby Shower Invitation</title>
+  <link rel="stylesheet" href="stylesheets.css" />
+</head>
+
+<body>
+  <div class="invitation-card">
+    <h2>Locally Grown</h2>
+    <h1>Baby Girl Is On The Way!</h1>
+
+    <img src="farmersmarket.png" alt="Farmers Market Stand" class="market-img" />
+
+    <p class="invite-text">
+      Please join us for a baby shower honoring
+    </p>
+
+    <h3>Mia & Anthony</h3>
+    <p>
+      Saturday, September 27th at 1pm<br />
+      16513 Alwood St.<br />
+      La Puente, CA 91744
+    </p>
+    <hr />
+
+   <div class="rsvp-wrapper">
+  <form class="rsvp-form" action="https://formspree.io/f/xdkdzaon" novalidate>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <textarea name="message" placeholder="Party Size" rows="4"></textarea>
+    <button type="submit">Send RSVP</button>
+  </form>
+
+  <div class="thank-you-message" style="display: none;">
+    <h4>Thank you!</h4>
+    <p>Your RSVP has been received. We can’t wait to celebrate with you!</p>
+  </div>
+</div>
+
+
+    <div class="registry-section">
+      <h4>Registry</h4>
+      <p>We are so grateful for your love and support! Due to travel limitations, we kindly ask that gifts be sent directly from our registry. 
+        If you prefer to bring something in person, gifts or gift cards are very welcome and appreciated.</p>
+      <a href="https://www.yourregistrylink.com" target="_blank" rel="noopener noreferrer" class="registry-button">Visit Our Baby Registry</a>
+    </div>
+  </div>
+  <script>
+  const form = document.querySelector('.rsvp-form');
+  const thankYou = document.querySelector('.thank-you-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
+
+    const response = await fetch(action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset(); // Clear the form fields
+      form.style.display = 'none'; // Hide the form
+      thankYou.style.display = 'block'; // Show thank-you message
+    } else {
+      alert('Oops! Something went wrong. Please try again later.');
+    }
+  });
+</script>
+</body>
+</html>
+
+
+
